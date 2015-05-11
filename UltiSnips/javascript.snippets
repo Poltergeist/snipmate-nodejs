@@ -158,8 +158,16 @@ snippet def "define an AMD module"
 define(${1:optional_name, }[${2:'jquery'}], ${3:callback});
 endsnippet
 
-snippet req "require an AMD module"
+snippet reqamd "require an AMD module"
 require([${1:'dependencies'}], ${2:callback});
+endsnippet
+
+snippet req "require a node module"
+$1 = require('${1:module}')$2
+endsnippet
+
+snippet module "Export Module" b
+module.exports = $1
 endsnippet
 
 # vim:ft=snippets:
